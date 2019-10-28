@@ -1,0 +1,9 @@
+# This needs to be run in an environment where the `vpsmonitoring_nginx` network is present.
+version: '3'
+
+services:
+  your_project:
+    build: .
+    container_name: your_project
+    ports:
+      - "8080:8080"

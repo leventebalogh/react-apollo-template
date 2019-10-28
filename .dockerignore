@@ -1,0 +1,13 @@
+# Dependencies
+node_modules
+
+# Build output
+build
+.cache
+
+# Yarn
+yarn-error.log*
+
+# Other
+.DS_Store
+.idea
