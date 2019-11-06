@@ -17,6 +17,7 @@ It includes both the client-side and server-side setup including server-side ren
 - Client: **Apollo (GraphQL)** set up with examples
 - Client: **Hot-reloading** with Parcel
 - Client: **Hashed bundles** for easier caching in production
+- Client: **Tailwind CSS** for using utility-first CSS
 
 ## Install
 ```bash
