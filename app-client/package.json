@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "parcel ./src/index.html",
-    "build": "parcel build --out-dir build ./src/index.html",
+    "build": "parcel build --out-dir build ./src/index.html && yarn compile",
     "compile": "babel src --out-dir compiled --delete-dir-on-start",
     "lint": "eslint --fix ./src",
     "update-dependencies": "updtr --use yarn",
