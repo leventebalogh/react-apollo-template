@@ -28,7 +28,7 @@
   "nodemonConfig": {
     "verbose": false,
     "ignore": [
-      "app-server/build/*"
+      "app-server/dist/*"
     ]
   },
   "devDependencies": {
