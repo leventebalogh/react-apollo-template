@@ -4,19 +4,19 @@ This repository serves as a template for creating React - Apollo projects quickl
 It includes both the client-side and server-side setup including server-side rendering.
 
 ## Features
-- Project: Yarn workspaces for easier development
-- Project: Linting (ESLint) set up and added to pre-commit hooks
-- Project: Testing (JEST) set up and added to pre-commit hooks
-- Project: Updating of NPM dependencies with one command (updtr)
-- Server: Express set up
-- Server: Apollo-Server set up and integrated with examples 
-- Server: Parcel middleware set up 
-- Server: Dockerized, self-contained service for easier deployment 
-- Client: React set up
-- Client: Routing set up with examples
-- Client: Apollo (GraphQL) set up with examples
-- Client: Hot-reloading with Parcel
-- Client: production build with hashed bundles
+- Project: **Yarn workspaces** for easier development
+- Project: **Linting (ESLint)** set up and added to pre-commit hooks
+- Project: **Testing (JEST)** set up and added to pre-commit hooks
+- Project: **Auto-updating NPM dependencies** with one command (updtr)
+- Server: **Express** set up for the server
+- Server: **Apollo-Server** set up and integrated with examples 
+- Server: **Parcel** middleware set up 
+- Server: **Dockerized** self-contained service for easier deployment 
+- Client: **React** set up (latest)
+- Client: **Routing** set up with examples
+- Client: **Apollo (GraphQL)** set up with examples
+- Client: **Hot-reloading** with Parcel
+- Client: **Hashed bundles** for easier caching in production
 
 ## Install
 ```bash
