@@ -7,7 +7,6 @@ import { getDataFromTree } from "@apollo/react-ssr";
 import { ApolloClient } from "apollo-client";
 import { InMemoryCache } from "apollo-cache-inmemory";
 import { createHttpLink } from "apollo-link-http";
-import { App } from "app-client/compiled/components/App";
 import { readClientFile } from "../utils";
 import { config } from "../services";
 
@@ -30,9 +29,10 @@ const getClient = req => {
 
 export const getSSRMiddleware = () => {
   return async (req, res) => {
-    // We are requireing this in here dynamically because we only want to use
-    // the different "babel-node" config in production mode. (which allows transpilation of code outside of this package)
+    // Requiring in this here dynamically so we don't enforce having the client code compiled
+    // during development mode. (otherwise it wouldn't find it until the client code is compiled)
     // eslint-disable-next-line
+    const { App } = require("app-client/compiled/components/App");
 
     const client = getClient(req);
     const WrappedApp = () => (
