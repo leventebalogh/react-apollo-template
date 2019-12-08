@@ -5,7 +5,15 @@ module.exports = api => {
     ["@babel/preset-env", { targets: { node: "current" } }],
     "@babel/preset-react"
   ];
-  const plugins = ["@babel/plugin-proposal-class-properties"];
+  const plugins = [
+    "@babel/plugin-proposal-class-properties",
+    [
+      "babel-plugin-transform-remove-imports",
+      {
+        test: "\\.(less|css|scss)$"
+      }
+    ]
+  ];
 
   return {
     presets,
