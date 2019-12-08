@@ -5,12 +5,12 @@
     "app-server"
   ],
   "scripts": {
+    "build": "lerna run build",
     "dev": "yarn workspace app-server dev",
+    "lint": "eslint --fix ./app-client ./app-server ",
     "prod": "yarn workspace app-server prod",
-    "build": "yarn workspaces run build",
-    "test": "yarn workspaces run test",
-    "lint": "yarn workspaces run lint",
-    "update-dependencies": "yarn workspaces run update-dependencies"
+    "test": "lerna exec -- jest ./src",
+    "update-dependencies": "lerna exec -- updtr --use yarn"
   },
   "dependencies": {
     "@apollo/react-common": "^3.1.3",

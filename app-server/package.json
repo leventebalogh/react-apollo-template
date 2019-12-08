@@ -4,12 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon --exec \"babel-node ./index.js\"",
-    "prod": "NODE_ENV=production node ./build/server.js",
-    "lint": "eslint --fix ./src",
-    "update-dependencies": "updtr --use yarn",
-    "test": "jest ./src",
-    "build": "babel src --out-dir build --delete-dir-on-start --ignore '/node_modules/(?!app-client)/'"
+    "build": "babel src --config-file ../babel.config.js --out-dir build --delete-dir-on-start --ignore '/node_modules/(?!app-client)/'",
+    "dev": "nodemon --exec \"babel-node --config-file ../babel.config.js ./index.js\"",
+    "prod": "NODE_ENV=production node ./build/server.js"
   },
   "keywords": [],
   "author": "",
