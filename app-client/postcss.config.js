@@ -1,5 +1,4 @@
-const tailwindcss = require("tailwindcss");
-
+/* eslint-disable global-require */
 module.exports = {
-  plugins: [tailwindcss()]
+  plugins: [require("tailwindcss"), require("postcss-import")]
 };
