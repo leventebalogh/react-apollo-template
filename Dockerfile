@@ -8,7 +8,7 @@ WORKDIR /var/www
 COPY . .
 
 # Install dependencies
-RUN yarn install --production
+RUN yarn install
 
 # Build client
 RUN yarn build
