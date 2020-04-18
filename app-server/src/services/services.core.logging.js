@@ -14,5 +14,5 @@ const error = (msg, ...props) => {
 export const logging = {
   info,
   warn,
-  error
+  error,
 };

@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// Extra Fonts
+// ------------------------------------------
+@font-face {
+  font-family: "Raustila";
+  src: url("../static/fonts/Raustila.woff") format("woff"),
+    url("../static/fonts/Raustila.woff2") format("woff2"),
+    url("../static/fonts/Raustila.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: fallback;
+}
+
+// Inputs Autofill
+// ------------------------------------------
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: #b3b3b3;
+  -webkit-box-shadow: 0 0 0px 1000px #2f282d inset;
+  border-bottom: 1px solid black;
+  padding: 4px 8px;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+// Extra Utility Classes
+.x-center {
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.y-center {
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.appearance-none {
+  appearance: none;
+  -webkit-appearance:none;
+}

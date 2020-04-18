@@ -4,7 +4,7 @@ import { logging } from "./services.core.logging";
 
 export const ENV = {
   PRODUCTION: "production",
-  DEVELOPMENT: "development"
+  DEVELOPMENT: "development",
 };
 
 const getEnv = () => {
@@ -13,17 +13,22 @@ const getEnv = () => {
   return env === ENV.PRODUCTION ? ENV.PRODUCTION : ENV.DEVELOPMENT;
 };
 
+// Reads the environment configuration files from the config/server folder
+// and merges it with the default configuration.
 const getConfig = () => {
   const env = getEnv();
-  const configPath = `../../../config/${env}.json`;
+  const defaultConfigPath = `../../../config/server/default.json`;
+  const configPath = `../../../config/server/${env}.json`;
+  const defaultConfig = require(defaultConfigPath); // eslint-disable-line
   const config = require(configPath); // eslint-disable-line
 
   logging.info(`[ Config ] Using env "${env}"`);
   logging.info(`[ Config ] Loaded configuration: "${configPath}"`);
 
   return {
+    ...defaultConfig,
     ...config,
-    env
+    env,
   };
 };
 

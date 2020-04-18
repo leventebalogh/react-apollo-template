@@ -1,11 +1,66 @@
+// Based on the default config: https://github.com/tailwindcss/tailwindcss/blob/master/stubs/defaultConfig.stub.js
 module.exports = {
   theme: {
-    minHeight: {
-      "0": "0",
-      "1/4": "25%",
-      "1/2": "50%",
-      "3/4": "75%",
-      full: "100%"
-    }
-  }
+    fontFamily: {
+      primary: ["Quicksand", "sans-serif"],
+      secondary: ["Raustila", "cursive"],
+    },
+    extend: {
+      minHeight: {
+        "0": "0",
+        "1/4": "25%",
+        "1/2": "50%",
+        "3/4": "75%",
+        full: "100%",
+      },
+      fontSize: {
+        "7xl": "5rem",
+        "8xl": "6rem",
+        "9xl": "7rem",
+        "10xl": "8rem",
+        "11xl": "9rem",
+        "12xl": "10rem",
+      },
+      maxWidth: {
+        "2xs": "19rem",
+      },
+      zIndex: {
+        "minus-1": -1,
+      },
+      height: {
+        "fix-1": "100px",
+        "fix-2": "200px",
+        "fix-3": "300px",
+        "fix-4": "400px",
+        "fix-5": "500px",
+        "fix-6": "600px",
+        "fix-7": "700px",
+        "fix-8": "800px",
+        "fix-9": "900px",
+        "fix-10": "1000px",
+        "fix-11": "1100px",
+        "fix-12": "1200px",
+        "fix-13": "1300px",
+        "fix-14": "1400px",
+        "fix-15": "1500px",
+      },
+      width: {
+        "fix-1": "100px",
+        "fix-2": "200px",
+        "fix-3": "300px",
+        "fix-4": "400px",
+        "fix-5": "500px",
+        "fix-6": "600px",
+        "fix-7": "700px",
+        "fix-8": "800px",
+        "fix-9": "900px",
+        "fix-10": "1000px",
+        "fix-11": "1100px",
+        "fix-12": "1200px",
+        "fix-13": "1300px",
+        "fix-14": "1400px",
+        "fix-15": "1500px",
+      },
+    },
+  },
 };

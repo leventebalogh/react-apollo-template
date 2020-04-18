@@ -5,3 +5,4 @@ dist
 compiled
 yarn-error.log
 lerna.debug.log
+.DS_Store

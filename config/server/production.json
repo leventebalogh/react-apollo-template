@@ -1,0 +1,6 @@
+{
+  "cache": {
+    "ttl": 100,
+    "checkperiod": 120
+  }
+}

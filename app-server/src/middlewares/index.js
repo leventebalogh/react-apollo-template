@@ -5,3 +5,4 @@ export * from "./middleware.core.ssr";
 export * from "./middleware.core.static.client-build";
 export * from "./middleware.core.static";
 export * from "./middleware.core.utils";
+export * from "./middleware.core.static.image-resizer";

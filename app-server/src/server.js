@@ -8,7 +8,7 @@ import {
   getStaticClientBuildMiddleware,
   getSSRMiddleware,
   applyMiddlewares,
-  getLoggerMiddleware
+  getImageResizerMiddleware,
 } from "./middlewares";
 
 const app = express();
@@ -21,20 +21,22 @@ const { port, env } = config;
 const middlewares = {
   development: [
     getApolloMiddleware(),
+    getImageResizerMiddleware(),
     { path: "/static", middleware: getStaticMiddleware() },
-    { path: "/", middlewareConstructor: getParcelMiddleware }
+    { path: "/", middlewareConstructor: getParcelMiddleware },
   ],
   production: [
     getApolloMiddleware(),
+    getImageResizerMiddleware(),
     { path: "/static", middleware: getStaticMiddleware() },
     { path: "/", middleware: getStaticClientBuildMiddleware() },
-    getLoggerMiddleware("LOG 1"),
-    getSSRMiddleware()
-  ]
+    getSSRMiddleware(),
+  ],
 };
 const envSpecificMiddlewares = middlewares[env] || middlewares.development;
 
 applyMiddlewares(envSpecificMiddlewares, app);
+app.disable("x-powered-by");
 app.listen({ port }, () =>
   logging.info(`[ Express ] 🚀 Server ready at http://localhost:${port}!`)
 );

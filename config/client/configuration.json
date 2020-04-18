@@ -1,0 +1,10 @@
+{
+    "mixpanel": {
+        "enabled": true,
+        "token": "3a0e123d9b7676ef8ac819fe46fe9e3d"
+    },
+    "googleAnalytics": {
+        "enabled": true,
+        "trackingID": "UA-159115739-1"
+    }
+}

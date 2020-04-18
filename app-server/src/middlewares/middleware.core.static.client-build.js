@@ -7,5 +7,10 @@ export function getStaticClientBuildMiddleware() {
 
   logging.info("[ Static ] - Serving files from client/build directory");
 
-  return serveStatic(distFolderPath, { index: false });
+  return serveStatic(distFolderPath, {
+    index: false,
+    cacheControl: true,
+    immutable: true,
+    maxAge: 31536000,
+  });
 }
